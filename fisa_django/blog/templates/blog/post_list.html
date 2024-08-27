@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
+<!-- 상속을 받을 것임 -->
+{% extends 'blog/base.html' %}
+
+<!-- 스테틱도 상속 받을 것 임-->
+ {% load static %}
+<!-- 여기가 block에서 쓰일 내용-->
+ {% block page_area %}
+
 <body>
     {% for p in post_list %}
     <!-- bootstrap에서 card 가져오기 -->
@@ -25,4 +27,5 @@
  
 {% endfor %}
 </body>
-</html>
+
+{% endblock %}
